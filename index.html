@@ -1,0 +1,32 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Draft Board Builder</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+</head>
+<body>
+    <div id="auth-container">
+        <h1>Draft Board Builder</h1>
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="signUp()">Sign Up</button>
+        <button onclick="login()">Login</button>
+    </div>
+
+    <div id="dashboard" class="hidden">
+        <button onclick="logout()">Logout</button>
+        <h2>Your Draft Board</h2>
+        <div id="position-filter"></div>
+        <div id="players-container"></div>
+        <button onclick="saveBoard()">Save Draft Board</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
